@@ -8,8 +8,15 @@
     list-style: none;
 }
 
-section{
-    
+.logo-container{
+display: flex;
+
+}
+.close{
+    display: none;
+}
+.check{
+    display: none;
 }
 .logo{
     width: 100%;
@@ -33,7 +40,7 @@ main{
     font-size: 20px;
       
     background-image: url(images/desktop/image-hero.jpg);
-    background-size: 200vh;
+    background-size: contain;
     background-repeat: no-repeat;
     max-width: 1440px;
     height: auto;
@@ -57,28 +64,29 @@ nav{
 }
 
 .nav-links a{
-    position: ;
+     
     color: white;
 }
 .descript{
+    position: absolute;
     border: white solid 2px;
     display: flex;
     flex-wrap: nowrap;
     width: 40%;
-    padding: 20px 40px;
+    padding: 40px;
     left: 0;
-    margin-top: 60px;
     height: auto;
-    margin: 0 auto;
+    margin: 40px 50px;
+    
 }
 .descript P{
-    position: relative;
+    position:relative;
     text-transform: uppercase;
     font-size: 2.5em;
     color: white;
 }
 .intro{
-    margin-top: 400px;
+    margin-top: 600px;
     display: flex;
      
     flex-direction: rows;
@@ -228,35 +236,43 @@ footer a{
     gap: 20px;
      
 }
-.footer-icons svg{
-    width: 20px;
-    height: auto;
-}
+ 
 
 @media screen and (max-width: 768px){
+  nav{
+    gap: 40px;
+  }
     main{
         font-size: 10px;
          
     }
+    
     .logo img{
         max-width: 100px;
     }
     .grid-header{
         gap: 270px;
     }
+    .descript{
+        margin-top: 0;
+        padding: 10px;
+    }
     .intro{
+        margin-top: 300px;
         flex-direction: column;
         justify-items: center;
     }
     .col{
         width: 100%;
     }
-    .wrapper{
-        width: 100%;
-    }
+   
     footer{
         flex-wrap: wrap;
-        gap: 100px;
+        gap: 50px;
+    }
+    .footer-icons li{
+        padding: 0 20px;
+         
     }
     .grid-btn{
         display: none;
@@ -266,35 +282,60 @@ footer a{
         margin-bottom: 20px;
      }
     .wrapper{
-        padding: 20px 0 0 0;
+        padding: ;
         margin-left: 0;
         width: 100%;
         
     }
-}
+     
 @media screen and (max-width: 425px) {
     nav{
         flex-direction: column;
-        padding: 10px;
-        gap: 20px;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        background-color: black;
-        align-items: center;
-    }
+       padding: 10px;
+       gap: 20px;
+       width: 100%;
+       height: auto;
+       margin: 0 auto;
+       background-color: black;
+       align-items: center;
+       position: static;
+   }
+   .nav-links{
+       flex-direction: column;
+   }
+   .close{
+       position: absolute;
+       display: block;
+       left: 200px;
+       z-index: 9;
+       visibility: visible;
+   }
+   .check{
+       position: absolute;
+       display: block;
+       left: 200px;
+       z-index: 9;
+       visibility: visible;
+   }
+   .intro{
+        margin-top: 600px;
+   }
     .nav-links{
         flex-direction: column;
     }
-    .footer-links{
-        flex-direction: column;
-        align-items: center;
-    }
+     
+    .logo-container{
+        position: relative;
+         
+        
+        }
+    
     main{
         background-image: url(images/mobile/image-hero.jpg);
         background-size: contain;
         padding: 0 20px;
     }
+    
      .intro{
         text-align: center;
      }
@@ -304,55 +345,72 @@ footer a{
     }
     .grid-container{
         display: flex;
-        flex-direction: column;
-        gap: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
          
+         
+    }
+    .grid-item{
+        width: 100%;
+        height: 20vh;
+        padding: 20px;
     }
     .grid-container h5{
         color: white;
         position: relative;
-        margin: 20px 0 0 20px;
-        text-transform: uppercase;
+        margin: 60px auto;
+        font-size: 2em;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    .footer-right{
+        align-items: center;
+        justify-content: center;
+
+    }
+    .footer-links{
+        flex-direction: column;
     }
     .img1{
      
         background-image: url(images/mobile/image-deep-earth.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img2{
         background-image: url(images/mobile/image-night-arcade.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img3{
         background-image: url(images/mobile/image-soccer-team.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img4{
         background-image: url(images/mobile/image-grid.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img5{
         background-image: url(images/mobile/image-from-above.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img6{
         background-image: url(images/mobile/image-pocket-borealis.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img7{
         background-image: url(images/mobile/image-curiosity.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
     .img8{
         background-image: url(images/mobile/image-fisheye.jpg);
         background-repeat: no-repeat;
-         
+        background-size: contain;
     }
 }
